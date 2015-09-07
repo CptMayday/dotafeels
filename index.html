@@ -68,7 +68,7 @@
 
 	  <script>
 
-	  var defaultMessage = "Click or Swipe to get some great Dota Feels!";
+	  var defaultMessage = "Click or tap to get some great Dota Feels!";
 	  var lastmessage = "Now go play some Fucking Dota!";
 
 	  var dotafeels = [
@@ -136,9 +136,13 @@
 				$("h3.quote").hide().html(defaultMessage);
 					$("h3.quote").fadeIn(750);
 					
-				$("#feelsbox").click(function(){
-					$("h3.quote").hide().html(returnNewQuote);
-					$("h3.quote").fadeIn(750);
+				$("#feelsbox").click(function(e){
+
+    				if (e.target.nodeName.toLowerCase() != 'a') {
+
+						$("h3.quote").hide().html(returnNewQuote);
+						$("h3.quote").fadeIn(750);
+					};
 					
 				});
 		
