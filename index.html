@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+  	<title>Dota Feels</title>
+
+    <meta charset="utf-8"> 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
+  
+  <body>
+
+	<div class="container">
+		<div class="page-header">
+			<h1>Dota Feels <small>Feels from fellow dota players. Here to entertain or at least teach you something.</small></h1>
+		</div>
+		
+		<div class="row" id="feelsboxRow">
+			<div class="jumbotron" id="feelsbox">
+		  		<h3 class="quote">DotaFeels Quote<h3>
+			</div>
+		</div>
+
+	  <div class="row">
+	  	<div class="col-sm-4 col-md-offset-4">
+	  		<p>Got a great Dota Feel to add? <a href="mailto:dotafeels@gmail.com?subject=DotaFeels Submit" target="_BLANK">Send it in!</a></p> 
+	  	</div>
+		</div>
+	  <div class="row">
+	  	<div class="col-sm-4">
+	  		<h2>Get better</h2>
+	  		<ul class="list-group">
+					<li class="list-group-item">Welcome to Dota, You suck.</li>
+					<li class="list-group-item">Purge <small>Youtube Channel</small></li>
+					<li class="list-group-item">Third item</li>
+				</ul>
+	  	</div>
+			<div class="col-sm-4">
+				<h2>Get entertained</h2>
+	  		<ul class="list-group">
+					<li class="list-group-item">Sir Action Slacks <span>Youtube Channel</span></li>
+					<li class="list-group-item">Second item</li>
+					<li class="list-group-item">Third item</li>
+				</ul>
+			</div>
+			<div class="col-sm-4">
+				
+				
+			</div>
+	  </div>
+
+	  <script>
+
+	  var defaultMessage = "Click or Swipe to get some great Dota Feels!";
+	  var lastmessage = "Now go play some Fucking Dota!";
+
+	  var dotafeels = [
+	  	"You aren't Dendi, and even if you were. There's always room to improve.",
+	  	"Buy some fucking wards.",
+	  	"Just because you are ahead, doesn't mean you will win.",
+		  "Do you know who Purge is? If not, here's some <a href=\"https://www.youtube.com/user/PurgeGamers\" target=\"_BLANK\">homework</a>.",
+		  "Playing support is more than buying courier and wards at the start of the game.",
+		  "As a support, stop stealing your carry's last hits. ",
+		  "Say hello to your team during the picking phase. ",
+		  "Just because you are level 13, doesn't mean you are ready for ranked. Focus on getting better first. ",
+		  "MMR is just a number. Only if you are sub 3k though, otherwise make sure to post it everywhere so you look smart and stuff. ",
+		  "Get <a href=\"http://www.dotabuff.com/\" target=\"_BLANK\">Dotabuff</a>. Seriously, get some insight into your skills, ability and play style so you can improve. ",
+		  "Do you flame your team mates? Flaming actually makes them play worse. Joke is on you. (Also, you are a bit of an asshole)",
+		  "Stop fucking calling GG in all chat just because you are behind. Dota, just like life, isn't always easy. Stick with it. Things will get better. And if not, at least try to learn something. ",
+		  "Don't know what to do? Farm. Not gaining gold equals losing. ",
+		  "Unsubscribe from <a href=\"https://www.reddit.com/r/dota2\" target=\"_BLANK\">r/dota2</a>, subscribe to <a href=\"https://www.reddit.com/r/TrueDoTA2/\" target=\"_BLANK\">r/truedota2</a> and <a href=\"https://www.reddit.com/r/learndota2/\" target=\"_BLANK\">r/learndota2</a> instead. ",
+		  "Watch your own replays, you can learn a lot. ",
+		  "Want to get better? First step is to admit that you are not at The International for a reason. ",
+		  "Giving up early game and saying \"I told you we lost\" does not make you look smart. It just means that you threw the game by no longer trying to win.", 
+	  ]
+
+	  var dotaFeelsUsedQuotes = []
+
+	  function returnRandomQuote() {
+	  	var quote = dotafeels[Math.floor(Math.random() * dotafeels.length)];
+	  	return quote;
+	  }
+
+	  function inArray(needle,haystack)
+		{
+		    var count=haystack.length;
+		    for(var i=0;i<count;i++)
+		    {
+		        if(haystack[i]===needle){return true;}
+		    }
+		    return false;
+		}
+
+	  function returnNewQuote() {
+	  	//grab random quote
+	  	//var quote = dotafeels[Math.floor(Math.random() * dotafeels.length)];
+
+	  	//check if quote was used
+	  	for (var i = 0; i < dotafeels.length; i++) {
+	  		if (inArray(dotafeels[i],dotaFeelsUsedQuotes) == true) {
+	  				if (i+1 == dotafeels.length) {
+	  					console.log("done?");
+	  					return lastmessage;
+	  				}
+	  		} else {
+	  				dotaFeelsUsedQuotes.push(dotafeels[i]);
+	  			return dotafeels[i];
+	  			i==0;
+	  			break;
+	  		}
+//			console.log(i);
+//	  	console.log(dotafeels.length);	
+	  	}
+	 
+	  }
+
+			$(document).ready(function(){
+
+				$("h3.quote").hide().html(defaultMessage);
+					$("h3.quote").fadeIn(750);
+					
+				$("#feelsbox").click(function(){
+					$("h3.quote").hide().html(returnNewQuote);
+					$("h3.quote").fadeIn(750);
+					
+				});
+		
+			});
+
+	  </script>
+
+	</div>
+
+  </body>
+
+</html>
+

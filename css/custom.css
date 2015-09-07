@@ -1,0 +1,44 @@
+/* Custom CSS */
+
+body {
+	font-family: Georgia;
+	background-color: #353440;
+}
+
+h1, h2 {
+	color: #c33d2b;
+}
+
+a { 
+	color: #c33d2b;
+	text-decoration: underline;
+}
+a#submitFeels {
+	text-decoration: none;
+}
+
+h3.quote {
+	font-size: 36px;
+	line-height: 50px;
+	color: #182526;
+	font-family: arial;
+}
+
+
+#feelsboxRow {
+	min-height: 320px;
+	cursor: pointer;
+}
+
+.jumbotron {
+	background-color: #D0D0D0;
+	min-height: 236px;
+}
+
+.list-group-item {
+	background-color: #D0D0D0;
+}
+
+p {
+	color: #cfcfcf;
+}
