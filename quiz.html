@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+  	<title>Dota Feels</title>
+
+    <meta charset="utf-8"> 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
+  
+  <body>
+
+	<div class="container">
+		<div class="page-header">
+			<h1>Dota Feels <small>Feels from fellow dota players. Here to entertain or at least teach you something.</small></h1>
+		</div>
+		
+		<div class="row" id="quizheader">
+			<div class="jumbotron">
+				<h3>What type of Dota player are you?</h3>
+				<p>Fill out these 10 questions and you will finally know what kind of player you truly are.</p>
+
+				<button type="button" id="startQuizButton" class="btn btn-primary">Start quiz</button>
+			</div>
+		</div>
+
+
+		<div class="row" id="quizbox">
+			<div class="well">
+				<div class="progress">
+  				<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+  				</div>
+				</div>
+				<h4>Question</h4>
+				<p>Explanation of question</p>
+				<div class="list-group">
+				  <a href="#" class="list-group-item">First item</a>
+				  <a href="#" class="list-group-item">Second item</a>
+				  <a href="#" class="list-group-item">Third item</a>
+				</div>
+			</div>
+		</div>
+
+  </div>
+
+	  <script>
+
+	  var question = {
+	  	number: 1,
+	  	question: "this is a question"
+	  };
+
+	  
+
+
+
+	  function startQuiz() {
+	  	//kick off the quiz after user hits start
+	  	console.log("quiz starts");
+
+	  	//load the first question
+	  	$("")
+
+	  	$("#quizbox").fadeIn("650");
+	  	$("#startQuizButton").hide();
+	  }
+
+		$(document).ready(function(){
+			
+		});
+
+		$("#startQuizButton").click(function() {
+				startQuiz();
+			}
+		);
+
+	  </script>
+
+	</div>
+
+  </body>
+
+</html>
+

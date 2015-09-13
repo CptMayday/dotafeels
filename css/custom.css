@@ -43,6 +43,12 @@ h3.quote {
 	font-size: 32px;
 }
 
+#quizheader p {
+	color: #182526;
+}
+	#quizheader .jumbotron {
+		min-height: 120px;
+	}
 
 .list-group-item {
 	background-color: #D0D0D0;
@@ -50,6 +56,13 @@ h3.quote {
 
 p {
 	color: #cfcfcf;
+}
+
+
+/* quiz css */
+
+#quizbox {
+	display: none;
 }
 
 /* Extra small devices (phones, less than 768px) */
